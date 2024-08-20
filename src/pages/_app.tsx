@@ -10,12 +10,13 @@ import { mainnet, base } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import Header from "@/components/header";
 import { PageViewTracker } from "@/utils/useLogView";
+import Footer from "@/components/footer";
 
 const config = getDefaultConfig({
   appName: "Simple User Events",
   projectId: "YOUR_PROJECT_ID",
   chains: [mainnet, base],
-  ssr: true, // If your dApp uses server side rendering (SSR)
+  ssr: true, 
 });
 
 const queryClient = new QueryClient();
@@ -34,8 +35,11 @@ export default function App({
             <RainbowKitProvider>
               <>
                 <Header />
-                <PageViewTracker />
-                <Component {...pageProps} />
+                <main>
+                  <PageViewTracker />
+                  <Component {...pageProps} />
+                </main>
+                <Footer />
               </>
             </RainbowKitProvider>
           </RainbowKitSiweNextAuthProvider>

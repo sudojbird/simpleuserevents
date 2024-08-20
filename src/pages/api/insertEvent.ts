@@ -21,7 +21,7 @@ export default async function handler(req: any, res: any) {
         RETURNING *;
       `;
 
-      //res.status(200).json(result[0]);
+      res.status(200).json(result);
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: 'Failed to insert event' });

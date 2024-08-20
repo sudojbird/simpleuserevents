@@ -3,7 +3,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export default function Header() {
   return (
-    <div className="flex justify-between items-center py-6 px-8">
+    <div className="flex justify-between items-center py-6 px-8 w-full">
       <div className="flex flex-row gap-8">
         <Link href="/" className="text-xl font-bold">
           Test Events
