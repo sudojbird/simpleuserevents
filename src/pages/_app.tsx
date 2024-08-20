@@ -1,9 +1,9 @@
 import "@/styles/globals.css";
+import "@rainbow-me/rainbowkit/styles.css";
 import type { AppProps } from "next/app";
 import { SessionProvider } from "next-auth/react";
 import type { Session } from "next-auth";
 import { RainbowKitSiweNextAuthProvider } from "@rainbow-me/rainbowkit-siwe-next-auth";
-import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultConfig, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { WagmiProvider } from "wagmi";
 import { mainnet, base } from "wagmi/chains";
@@ -16,7 +16,7 @@ const config = getDefaultConfig({
   appName: "Simple User Events",
   projectId: "YOUR_PROJECT_ID",
   chains: [mainnet, base],
-  ssr: true, 
+  ssr: false, 
 });
 
 const queryClient = new QueryClient();
